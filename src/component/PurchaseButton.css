@@ -1,0 +1,32 @@
+.Purchase-button {
+  color: rgb(15, 17, 17);
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgb(255, 164, 28);
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto;
+  border-color: rgb(255, 143, 0);
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: rgba(32, 29, 29, .625) 0px 2px 5px 0px;
+  cursor: pointer;
+  font-size: calc(10px + 2vmin);
+  width: 100%;
+}
+
+.Purchase-button:hover {
+  color: rgb(22, 25, 25);
+  background-color: rgb(255, 186, 84);
+  border-color: rgb(255, 171, 63);
+  box-shadow: rgba(42, 38, 38, .5) 0px 2px 5px 0px;
+}
+
+.Purchase-button:active {
+  color: rgb(10, 12, 12);
+  background-color: rgb(191, 123, 21);
+  border-color: rgb(191, 107, 0);
+  box-shadow: rgba(96, 93, 93, .375) 0px 2px 5px 0px;
+}
