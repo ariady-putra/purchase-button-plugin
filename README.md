@@ -16,3 +16,4 @@ Just provide `txInfo` map containing `toAddress`, `lovelaces`, and optionally a 
 
 ## TODO
 - Provide a component to display error / transaction status for user feedback, currently it's only logged at console.
+- Support tokens other than ADA
