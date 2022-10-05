@@ -14,9 +14,7 @@ import {
   Value,
 } from '@emurgo/cardano-serialization-lib-asmjs';
 
-import './PurchaseButton.css';
-
-function PurchaseButton({txInfo}) {
+function PurchaseButton({txInfo, callback, onError}) {
   // Protocol Parameters
   const pp = {
     min_fee_a           : 44,
@@ -107,12 +105,22 @@ function PurchaseButton({txInfo}) {
               
               const txSigned = txWitnessed.to_hex();
               const txHash = await wallet.api.submitTx(txSigned);
-              if(txInfo.callback != null)
-                txInfo.callback(txHash);
-              console.log(JSON.stringify({txHash}));
+              try {
+                callback({txHash});
+              }
+              catch {
+                const e = JSON.stringify({txHash});
+                console.log(e);
+              }
             }
             catch(x) {
-              console.log(JSON.stringify(x));
+              try {
+                onError(x);
+              }
+              catch {
+                const e = JSON.stringify(x);
+                console.log(e);
+              }
             }
           }}>
             <table><tr><td>
