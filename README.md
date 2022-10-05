@@ -12,7 +12,7 @@ Take a look at [`App.js`](src/App.js#L21):
   lovelaces : 5000000, // 5 ADA = 5million lovelace
 }}/>
 ```
-Just provide `txInfo` map containing `toAddress`, `lovelaces`.
+Just provide `txInfo` map containing `toAddress` and `lovelaces`.
 
 ## Callbacks
 Optional attributes are `callback` and `onError` function for success and error events respectively.
@@ -25,4 +25,4 @@ The `onError` function also takes 1 parameter which is a map containing the erro
 
 ## TODO
 - Provide a component to display error / transaction status for user feedback, currently it's only logged at console.
-- Support tokens other than ADA
+- Support tokens other than ADA.
