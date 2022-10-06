@@ -14,7 +14,7 @@ import {
   Value,
 } from '@emurgo/cardano-serialization-lib-asmjs';
 
-function PurchaseButton({txInfo, callback, onError}) {
+function PurchaseButton({label='Purchase using', txInfo, callback, onError}) {
   // Protocol Parameters
   const pp = {
     min_fee_a           : 44,
@@ -127,7 +127,7 @@ function PurchaseButton({txInfo, callback, onError}) {
               <img src = {window.cardano[key].icon}
                   width={32} height={32} alt={key}/>
               </td><td>
-              {`Purchase using ${window.cardano[key].name}`}
+              {`${label} ${window.cardano[key].name}`}
             </td></tr></table>
         </button></td></tr>
       )}
