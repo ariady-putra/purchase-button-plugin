@@ -7,9 +7,9 @@
 NOTE: Pop-up window depends on the client's browser, wallet extension used, and system configurations. It may fail to take focus.
 
 ## How to integrate
-Take a look at [`App.js`](src/App.js#L21):
+Take a look at [`App.js`](src/App.js#L33):
 ```js
-<PurchaseButton txInfo={{
+<PurchaseButton id='itemName' txInfo={{
   toAddress : 'addr_test1qp75v9ld0084zl07kwjyfnwagm7nsvdvnkknqkhkmf025gq6rx4eret2xzeatlfajkeq7u2fxl55drpd96xeaxzns85sfxah9j',
   lovelaces : 5000000, // 5 ADA = 5million lovelace
 }}/>
@@ -20,10 +20,10 @@ Just provide `txInfo` map containing `toAddress` and `lovelaces`.
 Optional attributes are `callback` and `onError` function for success and error events respectively.
 
 ### On success
-The `callback` function takes 1 parameter which is a map containing `txHash`, see: [`PurchaseButton.js`](src/component/PurchaseButton.js#L109).
+The `callback` function takes 1 parameter which is a map containing `txHash`, see: [`PurchaseButton.js`](src/component/PurchaseButton.js#L113).
 
 ### On exception
-The `onError` function also takes 1 parameter which is a map containing the error, see: [`PurchaseButton.js`](src/component/PurchaseButton.js#L118).
+The `onError` function also takes 1 parameter which is a map containing the error, see: [`PurchaseButton.js`](src/component/PurchaseButton.js#L123).
 
 ## TODO
 - Provide a component to display error / transaction status for user feedback, currently it's only logged at console.
