@@ -10,6 +10,38 @@
   cursor: default;
 }
 
-.Item {
+.Qr {
   box-shadow: rgba(32, 29, 29, .625) 0px 2px 5px 0px;
+}
+
+.Ada {
+  color: rgb(15, 17, 17);
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto;
+  border-top: rgba(255, 143, 0, 0);
+  border-left: rgba(255, 143, 0, 0);
+  border-right: rgba(255, 143, 0, 0);
+  border-bottom: rgba(255, 143, 0, 1);
+  border-style: solid;
+  border-width: 1px;
+  font-size: calc(10px + 2vmin);
+  width: 33px;
+  text-align: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
