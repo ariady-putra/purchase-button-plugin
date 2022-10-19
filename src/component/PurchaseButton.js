@@ -19,7 +19,7 @@ function PurchaseButton({id, label='Purchase using', walletList, txInfo, callbac
   React.useEffect(() => {
     const wallets = [];
     for(const key in window.cardano) {
-      if(window.cardano[key].enable && wallets.indexOf(key) === -1) {
+      if(window.cardano[key].enable && wallets.indexOf(key) < 0) {
         wallets.push(key);
       }
     }
